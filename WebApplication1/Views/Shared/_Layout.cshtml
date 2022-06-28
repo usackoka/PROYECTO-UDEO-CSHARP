@@ -16,30 +16,73 @@
             crossorigin="anonymous"
             src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0"
             nonce="2DyWpYPx"></script>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <div class="d-flex container" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">UdeO</div>
+            <div class="list-group list-group-flush">
+                <!-- Redes sociales-->
+                <strong>Facebook Like & Post</strong>
+                <div class="fb-like"
+                     data-href="https://www.facebook.com/UdeO-La-Casona-101260089208879/?ref=pages_you_manage"
+                     data-width=""
+                     data-layout="box_count"
+                     data-action="like"
+                     data-size="large"
+                     data-share="true"></div>
+                <div class="fb-post"
+                     data-href="https://www.facebook.com/permalink.php?story_fbid=101260639208824&amp;id=101260089208879&amp;substory_index=0"
+                     data-width="225"
+                     data-show-text="true">
+                    <blockquote cite="https://www.facebook.com/permalink.php?story_fbid=101260639208824&amp;id=101260089208879&amp;substory_index=0"
+                                class="fb-xfbml-parse-ignore">
+                        Posted by
+                        <a href="https://www.facebook.com/UdeO-La-Casona-101260089208879/">UdeO - La Casona</a>
+                        on&nbsp;<a href="https://www.facebook.com/permalink.php?story_fbid=101260639208824&amp;id=101260089208879&amp;substory_index=0">Monday, March 21, 2022</a>
+                    </blockquote>
                 </div>
+                <br />
+                <br />
+                <strong>Twitter tweets & Follows</strong><a href="https://twitter.com/PaticasPetShop?ref_src=twsrc%5Etfw"
+                                                            class="twitter-follow-button"
+                                                            data-show-count="false">Follow PaticasPetShop</a>
+                <a class="twitter-timeline"
+                   href="https://twitter.com/PaticasPetShop?ref_src=twsrc%5Etfw">Tweets by PaticasPetShop</a>
+                <script async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"></script>
+                <script async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"></script>
+                <script async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"></script>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="d-flex" id="wrapper">
-            <main role="main" class="pb-3">
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- NAV VAR -->
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- END NAV VAR -->
+            <main role="main">
                 @RenderBody()
             </main>
         </div>
