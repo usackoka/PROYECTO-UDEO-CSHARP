@@ -3,9 +3,12 @@
     public class InventarioViewModel
     {
         public List<ProductoViewModel> productos { get; set; }
+        public ProductoViewModel product { get; set; }
+
         public InventarioViewModel()
         {
             productos = new List<ProductoViewModel>();
+            product = new ProductoViewModel();
             productos.Add(new ProductoViewModel
             {
                 id = 0,
@@ -46,6 +49,11 @@
                 expiration = "Sin expiración",
                 currency = "Q",
             });
+        }
+
+        public void setProduct(int id)
+        {
+            this.product = productos.Find(x => x.id == id) ?? new ProductoViewModel();
         }
     }
 }

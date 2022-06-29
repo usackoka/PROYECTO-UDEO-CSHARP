@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using WebApplication1.Models;
 using System.Text.Json;
-using System.Web.Script.Serialization;
+// using System.Web.Script.Serialization;
 
 namespace WebApplication1.Controllers
 {
@@ -17,11 +17,9 @@ namespace WebApplication1.Controllers
             inventario = new InventarioViewModel();
         }
 
-        public IActionResult OnGetProductos()
+        public string OnGetProductos()
         {
-            JavaScriptSerializer jss = new JavaScriptSerializer();
-            string output = jss.Serialize(inventario.productos);
-            return new JsonResult(output);
+            return "";
         }
 
         public IActionResult Index()
@@ -37,6 +35,11 @@ namespace WebApplication1.Controllers
         public IActionResult Mision()
         {
             return View();
+        }
+
+        public IActionResult DetalleProducto(string id = "") {
+            inventario.setProduct(Convert.ToInt32(id));
+            return View(inventario);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

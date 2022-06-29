@@ -1,92 +1,70 @@
 ﻿@using System.Text.Json;
 @{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
 <div class="container px-4 px-lg-5 mt-5">
-    <div id="rowProducts" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-        @for (var i = 0; i < Model.productos.Count; i++)
-        {
-            ProductoViewModel product = Model.productos[i];
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- New badge-->
-                    @if (@product.nuevo)
-                    {
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Nuevo
-                        </div>
-                    }
-                    <!-- Product image-->
-                    <img class="card-img-top"
-                     src=@product.image
-                     alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">@product.name</h5>
-                            <!-- Product reviews-->
-                            @if (@product?.stars > 0)
-                            {
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    @{
-                                        int tempStars = 1;
-                                    }
-                                    @while (@tempStars < 6)
-                                    {
-                                        @if (product?.stars >= tempStars)
-                                        {
-                                            <div class="bi-star-fill"></div>
-                                        }
-                                        else
-                                        {
-                                            <div class="bi-star"></div>
-                                        }
-                                        tempStars++;
-                                    }
-                                </div>
-                            }
-                            <!-- Product price-->
-                            @if (product?.oldPrice > 0)
-                            {
-                                <span class="text-muted text-decoration-line-through">@product.currency@product.oldPrice</span>
-                            }
-                            <strong>
-                                @product?.currency@product?.price
-                            </strong>
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <button class="btn btn-outline-dark mt-auto" id="btnInfo@product.id" Onclick="RazorFunction(@product?.id)">Más información</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+	<div id="rowProducts" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+		@for (var i = 0; i < Model?.productos.Count; i++)
+		{
+			ProductoViewModel product = Model?.productos[i];
+			<div class="col mb-5">
+				<div class="card h-100">
+					<!-- New badge-->
+					@if (@product.nuevo)
+					{
+						<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+							Nuevo
+						</div>
+					}
+					<!-- Product image-->
+				<img class="card-img-top"
+					 src=@product.image
+					 alt="..." />
+					<!-- Product details-->
+				<div class="card-body p-4">
+						<div class="text-center">
+							<!-- Product name-->
+						<h5 class="fw-bolder">@product.name</h5>
+							<!-- Product reviews-->
+							@if (@product?.stars > 0)
+							{
+								<div class="d-flex justify-content-center small text-warning mb-2">
+									@{
+										int tempStars = 1;
+									}
+									@while (@tempStars < 6)
+									{
+										@if (product?.stars >= tempStars)
+										{
+											<div class="bi-star-fill"></div>
+										}
+										else
+										{
+											<div class="bi-star"></div>
+										}
+										tempStars++;
+									}
+								</div>
+							}
+							<!-- Product price-->
+							@if (product?.oldPrice > 0)
+							{
+								<span class="text-muted text-decoration-line-through">@product.currency@product.oldPrice</span>
+							}
+							<strong>
+								@product?.currency@product?.price
+							</strong>
+						</div>
+					</div>
+					<!-- Product actions-->
+				<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+						<div class="text-center">
+							<a class="btn btn-outline-dark mt-auto" id="btnInfo@product.id" asp-area="" asp-controller="Home" asp-action="DetalleProducto" asp-route-id="@product.id">Más información</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
 </div>
-
-@functions {
-    public List<ProductoViewModel> GetProducts() => @Model.productos;
-
-    public string GetJSONString()
-    {
-        string jsonString = JsonSerializer.Serialize(Model.productos);
-        return jsonString;
-    }
-}
-
-@section Scripts
-    {
-    <script>
-        function RazorFunction(id) {
-            //var model = @Model.productos;
-            const json = JSON.parse("@GetJSONString()");
-            console.log('test', json, "@GetJSONString()")
-            document.getElementById("rowProducts").innerHTML = "test";
-        }
-    </script>
-} 

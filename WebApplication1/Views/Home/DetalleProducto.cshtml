@@ -1,0 +1,76 @@
+﻿@*
+	For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="container px-4 px-lg-5 mt-5">
+	<div id="rowProducts" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+		<div class="col mb-5">
+			<div class="card h-100">
+				@{
+					ProductoViewModel product = Model.product;
+				}
+				<!-- New badge-->
+				@if (product.nuevo)
+				{
+					<div class="badge bg-dark text-white position-absolute"
+					 style="top: 0.5rem; right: 0.5rem"></div>
+				}
+				<!-- Product video-->
+				<div width="600" height="315">
+					<iframe width="600" height="315" src="@product.video" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<!-- Product details-->
+				<div class="card-body p-4">
+					<div class="text-center">
+						<!-- Product name-->
+						<h5 class="fw-bolder">@product.name</h5>
+						</br>
+						Expira: <h8 class="fw-bolder">@product.expiration</h8>
+						</br>
+						Stock en tienda: <h8 class="fw-bolder">@product.stock</h8>
+						</br>
+						<!-- Product reviews-->
+						@if (@product?.stars > 0)
+						{
+							<div class="d-flex justify-content-center small text-warning mb-2">
+								@{
+									int tempStars = 1;
+								}
+								@while (@tempStars < 6)
+								{
+									@if (product?.stars >= tempStars)
+									{
+										<div class="bi-star-fill"></div>
+									}
+									else
+									{
+										<div class="bi-star"></div>
+									}
+									tempStars++;
+								}
+							</div>
+						}
+						</br>
+						<!-- Product price-->
+						@if (product?.oldPrice > 0)
+						{
+							<span class="text-muted text-decoration-line-through">@product.currency@product.oldPrice</span>
+						}
+						<strong>
+							@product?.currency@product?.price
+						</strong>
+					</div>
+				</div>
+				<!-- Product actions-->
+				<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+					<div class="text-center">
+						<a class="btn btn-outline-dark mt-auto" id="btnRegresar" asp-area="" asp-controller="Home" asp-action="Index">Regresar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

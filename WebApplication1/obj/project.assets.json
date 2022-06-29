@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\oscar\\.nuget\\packages\\": {},
+    "C:\\Users\\MP007\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\oscar\\Documents\\GitHub\\PROYECTO-UDEO-CSHARP\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\MP007\\OneDrive\\Escritorio\\Git-Propio\\PROYECTO-UDEO-CSHARP\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\Users\\oscar\\Documents\\GitHub\\PROYECTO-UDEO-CSHARP\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\oscar\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\oscar\\Documents\\GitHub\\PROYECTO-UDEO-CSHARP\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\MP007\\OneDrive\\Escritorio\\Git-Propio\\PROYECTO-UDEO-CSHARP\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\MP007\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MP007\\OneDrive\\Escritorio\\Git-Propio\\PROYECTO-UDEO-CSHARP\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\oscar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MP007\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -32,8 +32,7 @@
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
       },
       "frameworks": {
         "net6.0": {
@@ -68,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
