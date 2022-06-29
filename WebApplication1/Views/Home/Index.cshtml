@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Text.Json;
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -69,9 +70,12 @@
 </div>
 
 @functions {
-    public List<ProductoViewModel> GetProducts()
+    public List<ProductoViewModel> GetProducts() => @Model.productos;
+
+    public string GetJSONString()
     {
-        return Model.productos;
+        string jsonString = JsonSerializer.Serialize(Model.productos);
+        return jsonString;
     }
 }
 
@@ -79,19 +83,10 @@
     {
     <script>
         function RazorFunction(id) {
-            $.ajax({
-                type: 'GET',
-                url: '?handler=Productos',
-                dataType: "json",
-                success: function(data) {
-                    console.log('aqui')
-                    console.log('test2', data)
-                    document.getElementById("rowProducts").innerHTML = "test";
-                }, error: function(error) {
-                    console.log('error', error)
-                    alert("Error: " + error);
-                }
-            });
+            //var model = @Model.productos;
+            const json = JSON.parse("@GetJSONString()");
+            console.log('test', json, "@GetJSONString()")
+            document.getElementById("rowProducts").innerHTML = "test";
         }
     </script>
 } 
