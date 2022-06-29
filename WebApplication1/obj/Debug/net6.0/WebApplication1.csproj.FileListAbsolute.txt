@@ -50,3 +50,14 @@ D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\obj\Debug\n
 D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\obj\Debug\net6.0\WebApplication1.pdb
 D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\obj\Debug\net6.0\WebApplication1.genruntimeconfig.cache
 D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\obj\Debug\net6.0\ref\WebApplication1.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\System.Web.Extensions.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\System.Web.Abstractions.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\System.Data.Linq.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\System.Data.Services.Client.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\System.Data.Services.Design.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\System.Data.Entity.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\es\System.Data.Linq.resources.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\es\System.Data.Services.Client.resources.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\es\System.Data.Services.Design.resources.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\bin\Debug\net6.0\es\System.Data.Entity.resources.dll
+D:\Users\oscar\Documents\GitHub\PROYECTO-UDEO-CSHARP\WebApplication1\obj\Debug\net6.0\WebApplication1.csproj.CopyComplete

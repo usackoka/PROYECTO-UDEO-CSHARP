@@ -19,8 +19,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/oscar/Documents/GitHub/PROYECTO-UDEO-CSHARP/WebApplication1/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/Users/oscar/Documents/GitHub/PROYECTO-UDEO-CSHARP/WebApplication1/Views/Home/Mision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNaXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/oscar/Documents/GitHub/PROYECTO-UDEO-CSHARP/WebApplication1/Views/Home/Vision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaXNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Users/oscar/Documents/GitHub/PROYECTO-UDEO-CSHARP/WebApplication1/Views/Shared/Error.cshtml]
